@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, CheckSquare, Bell, Users, FileText, Video, CreditCard, Receipt, Database, LogOut } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { useAuth } from '../../contexts/AuthContext';
+import logoUrl from '../../assets/logo.jpg';
 
 interface SidebarItemProps {
   icon: React.ReactElement<{ className?: string }>;
@@ -46,8 +47,8 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
   return (
     <div className="flex h-[100dvh] w-64 md:w-64 flex-col border-r border-zinc-900 bg-zinc-950 px-4 py-6">
       <div className="flex items-center gap-2 mb-8 px-2 md:flex">
-        <div className="h-8 w-8 rounded-lg bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-          <span className="text-white font-bold text-xl leading-none">R</span>
+        <div className="h-8 w-8 rounded-lg overflow-hidden shadow-lg shadow-indigo-900/20 border border-zinc-800 bg-zinc-900">
+          <img src={logoUrl} alt="Retexia" className="h-full w-full object-cover" />
         </div>
         <span className="text-lg font-bold text-zinc-100 tracking-tight">Retexia</span>
       </div>

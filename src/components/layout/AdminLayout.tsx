@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sidebar } from './Sidebar';
 import { Menu, X } from 'lucide-react';
+import logoUrl from '../../assets/logo.jpg';
 
 export function AdminLayout({ children }: { children: React.ReactNode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,8 +12,8 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
       {/* Mobile Top Navigation Bar */}
       <div className="md:hidden absolute top-0 left-0 w-full h-16 bg-[#131316] border-b border-zinc-900 flex items-center justify-between px-4 z-40">
         <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-            <span className="text-white font-bold text-lg leading-none">R</span>
+          <div className="h-8 w-8 rounded-lg overflow-hidden shadow-lg shadow-indigo-900/20 border border-zinc-800 bg-zinc-900">
+            <img src={logoUrl} alt="Retexia" className="h-full w-full object-cover" />
           </div>
           <span className="text-lg font-bold text-zinc-100 tracking-tight">Retexia</span>
         </div>

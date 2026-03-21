@@ -4,6 +4,7 @@ import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Lock, Mail, ArrowRight, User as UserIcon } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import logoUrl from '../assets/logo.jpg';
 
 export function Login() {
   const [email, setEmail] = useState('');
@@ -66,8 +67,8 @@ export function Login() {
       <div className="w-full max-w-md p-6 sm:p-8 relative z-10">
         
         <div className="mb-10 text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30 mx-auto mb-6 border border-indigo-400/20">
-            <span className="text-white font-bold text-4xl leading-none">R</span>
+          <div className="h-16 w-16 rounded-2xl overflow-hidden shadow-xl shadow-indigo-900/30 mx-auto mb-6 border border-zinc-800 bg-zinc-900">
+            <img src={logoUrl} alt="Retexia" className="h-full w-full object-cover" />
           </div>
           <h1 className="text-3xl font-bold text-zinc-50 tracking-tight mb-2">Welcome Back</h1>
           <p className="text-zinc-400">Sign in to the Retexia Business Admin.</p>
