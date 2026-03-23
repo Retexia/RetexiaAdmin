@@ -198,16 +198,6 @@ export function ClientProfile() {
             </div>
           </div>
           
-          {!showForm && (
-            <Button 
-              size="lg" 
-              className="gap-2 bg-zinc-100 text-zinc-900 hover:bg-white shadow-md shadow-black/20 transform hover:-translate-y-0.5 transition-all w-full md:w-auto text-base font-semibold px-8"
-              onClick={() => setShowForm(true)}
-            >
-              <Sparkles className="h-5 w-5 text-indigo-600 shrink-0" />
-              Start Discovery (Generate BRD)
-            </Button>
-          )}
         </div>
       </header>
 
